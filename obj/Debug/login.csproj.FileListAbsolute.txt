@@ -1,0 +1,10 @@
+C:\Users\Rahul\source\repos\login\login\bin\Debug\login.exe.config
+C:\Users\Rahul\source\repos\login\login\bin\Debug\login.exe
+C:\Users\Rahul\source\repos\login\login\bin\Debug\login.pdb
+C:\Users\Rahul\source\repos\login\login\obj\Debug\login.csproj.AssemblyReference.cache
+C:\Users\Rahul\source\repos\login\login\obj\Debug\login.Form1.resources
+C:\Users\Rahul\source\repos\login\login\obj\Debug\login.Properties.Resources.resources
+C:\Users\Rahul\source\repos\login\login\obj\Debug\login.csproj.GenerateResource.cache
+C:\Users\Rahul\source\repos\login\login\obj\Debug\login.csproj.CoreCompileInputs.cache
+C:\Users\Rahul\source\repos\login\login\obj\Debug\login.exe
+C:\Users\Rahul\source\repos\login\login\obj\Debug\login.pdb
