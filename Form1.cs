@@ -31,27 +31,39 @@ namespace login
             confirmPassword = txtConfirmPassword.Text;
 
             String admin = ("admin@admin.com");
-            String adminPassword = ("admin");
+            String adminPassword = ("admin123$");
 
             Regex regex = new Regex(@"^([\w.-]+)@([\w-]+)((.(\w){2,3})+)$");
             Match match = regex.Match(email);
 
+            Regex hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
+            Match symbolMatch = hasSymbols.Match(password);
+
+            Regex hasMiniMaxChars = new Regex(@".{8,15}");
+            Match lengthMatch = hasMiniMaxChars.Match(password);
 
             if (match.Success)
             {
-                if (password == confirmPassword)
+                if (symbolMatch.Success && lengthMatch.Success)
                 {
-                    if (email == admin && password == adminPassword)
+                    if (password == confirmPassword)
                     {
-                        MessageBox.Show("You are successfully logged in !!!");
+                        if (email == admin && password == adminPassword)
+                        {
+                            MessageBox.Show("You are successfully logged in !!!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Incorrect login credentials !!!");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Incorrect login credentials !!!");
+                    else {
+                        MessageBox.Show("Password doesnot match with confirm password !!!");
                     }
                 }
                 else {
-                    MessageBox.Show("Password doesnot match with confirm password !!!");
+                    
+                    MessageBox.Show("Password should contain of 8 characters and one symbol !!!");
                 }
             }
             else {
